@@ -77,19 +77,21 @@ foreach ($lines as $line) {
         }
     </script>
 
-    <h1>Configuration Editor</h1>
+    <h2>&nbsp;</h2>
 
     <?php if (isset($message)): ?>
         <div class="message"><?= htmlspecialchars($message) ?></div>
     <?php endif; ?>
-
     <form method="POST">
+	<table id="info_panel">
         <?php foreach ($config as $section => $items): ?>
-            <div class="section">
-                <h2><?= htmlspecialchars($section) ?></h2>
+	    <tr>
+	    <th colspan="2"><?= htmlspecialchars($section) ?></th>
+	    </tr>
                 <?php foreach ($items as $key => $val): ?>
-                    <div>
-                        <label><?= htmlspecialchars($key) ?>:</label>
+		    <tr>
+                        <td><?= htmlspecialchars($key) ?>:</td>
+			<td>
                         <?php if ($section === 'Reflector' && $key === 'Name'): ?>
                             <select name="<?= $section . '__' . $key ?>" onchange="updateReflectorFields(this)">
                                 <?php foreach ($reflectors as $name => $data): ?>
@@ -107,14 +109,21 @@ foreach ($lines as $line) {
                         <?php else: ?>
                             <input type="text" name="<?= $section . '__' . $key ?>" value="<?= htmlspecialchars($val) ?>">
                         <?php endif; ?>
-                    </div>
+			</td>
                 <?php endforeach; ?>
-            </div>
+		</tr>
         <?php endforeach; ?>
-
-        <button type="submit" name="save">Save</button>
-        <button type="submit" name="save_restart">Save and Restart</button>
+	    <tr>
+	    <th colspan="2">Configuration</th>
+	    </tr>
+	    <tr>
+	    <td>Save Config</td>
+	    <td><button type="submit" name="save">Save</button> &nbsp; &nbsp; <button type="submit" name="save_restart">Save and Restart</button></td>
+	    </tr>
+	</table>
+<br><br><br>
     </form>
+<br><br><br>
 </body>
 </html>
 
