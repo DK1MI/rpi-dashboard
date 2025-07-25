@@ -94,3 +94,9 @@ li a:hover{
     background-color: #04AA6D;
     color: white;
 }
+
+body { padding: 20px; }
+.section { margin-bottom: 20px; border: 2px solid #04AA6D; padding: 10px; border-radius: 0px; width: 600px; }
+label { display: inline-block; width: 180px; font-weight: bold; }
+input, select { width: 300px; padding: 4px; margin-bottom: 10px; }
+.message { background: #e0ffe0; border: 1px solid green; padding: 10px; margin-bottom: 15px; }
