@@ -22,7 +22,7 @@ header("Pragma: no-cache");
   <li><a href="reboot.php">Reboot</a></li>
   <li><a href="shutdown.php">Shutdown</a></li>
   <li><a href="https://m17project.org" target=”_blank”>About</a></li>
-  <li><a href="https://opencollective.com/m17-project/donate" target=”_blank”>Donate</a></li>
+  <li><a href="https://www.paypal.com/donate/?hosted_button_id=4HTHZCS8UYPU6" target=”_blank”>Donate</a></li>
 </ul>
 
 <br><br><br>
